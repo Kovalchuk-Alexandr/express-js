@@ -1,0 +1,25 @@
+<!-- Подключаем header из blocks/header.ejs -->
+<%- include('blocks/header') -%>
+
+<main>
+    <div>
+        <h2>Node JS is cool!!!!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing 
+            elit. Quasi, odio.</p>
+        <p>Name: <b><%= name %></b></p>
+        <p>ID: <b><%= id %></b></p>
+    
+        <% if (id > 3) { %>
+            <h2><%= name %></h2>
+        <% } else { %>
+            <ul>
+                <% hobby.forEach(function(el){ %>
+                    <li><%= el%></li>
+                <% }); %>
+            </ul>
+        <% } %>
+    </div>
+</main>
+
+<!-- Подключаем footer из blocks/footer.ejs -->
+<%- include('blocks/footer') -%>

@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fcddaf;
+}
+
+/* ******* ------------ Header, footer block ------------ ******* */
+header,
+footer {
+  width: 90%;
+  padding: 20px 5%;
+  background: cadetblue;
+  font-weight: bold;
+}
+
+header {
+  border-bottom: 2px solid #636262;
+  font-size: 25px;
+}
+
+header .links {
+  float: right;
+  margin-right: 50px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+header .links a {
+  color: #882c07;
+  text-decoration: none;
+  border-bottom: 1px solid #882c07;
+  margin-right: 15px;
+}
+
+header .links a:hover {
+  color: #cf4a15;
+  border-color: #cf4a15;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  border-top: 2px solid #636262;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ******* ------------ Main block ------------ ******* */
+main {
+  display: flex;
+  width: 80%;
+  margin: 50px 10%;
+}
+
+main > div {
+  width: 60%;
+}
+
+/* ******* ------------ Form block ------------ ******* */
+form input {
+  width: 80%;
+
+  padding: 8px 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+form button {
+  display: block;
+  background: #d15a2a;
+  border: 0;
+  border-radius: 5px;
+  padding: 7px 12px;
+  color: #fddaae;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 300ms ease;
+}
+
+form button:hover {
+  transform: scale(1.1);
+}
+
+form .error {
+  color: red;
+  line-height: 20px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}

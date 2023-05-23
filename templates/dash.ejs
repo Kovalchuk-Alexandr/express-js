@@ -1,0 +1,13 @@
+<!-- Подключаем header из blocks/header.ejs -->
+<%- include('blocks/header') -%>
+<main>
+    <div>
+        <h2><%= title %></h2> <br>
+        <h4>You entered as <%= user.login %> !</h4> <br>
+        <form >
+            <button type="submit">Exit</button>
+        </form>
+    </div>
+ </main>
+<!-- Подключаем footer из blocks/footer.ejs -->
+<%- include('blocks/footer') -%>

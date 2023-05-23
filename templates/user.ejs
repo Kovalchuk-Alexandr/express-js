@@ -1,0 +1,32 @@
+<!-- Подключаем header из blocks/header.ejs -->
+<%- include('blocks/header') -%>
+<main>
+    <div>
+        <h2><%= title %></h2> 
+        <form action="/check-user-reg" method="post">
+            <input type="text" name="login" value="<%= user.login ? user.login : '' %>" placeholder="Enter login">
+            <input type="text" name="name" value="<%= user.name ? user.name : '' %>" placeholder="Enter Name">
+            <input type="email" name="email" value="<%= user.email ? user.email : '' %>" placeholder="Enter Email">
+            <input type="password" name="password" placeholder="Enter password">
+            <!-- выводим сообщение об ошибке -->
+            <% if (error != '') {%>
+                <div class="error" ><%= error %></div>
+            <% } %>
+            <button type="submit">Registration</button>
+        </form>
+    </div>
+    <div>
+        <h2>Authorisation</h2> 
+        <form action="/check-user-auth" method="post">
+            <input type="text" name="login" placeholder="Enter login">
+            <input type="password" name="password" placeholder="Enter password">
+            <!-- выводим сообщение об ошибке -->
+            <% if (errorAuth != '') {%>
+                <div class="error" ><%= errorAuth %></div>
+            <% } %>
+            <button type="submit">Authorisation</button>
+        </form>
+    </div>
+ </main>
+<!-- Подключаем footer из blocks/footer.ejs -->
+<%- include('blocks/footer') -%>
